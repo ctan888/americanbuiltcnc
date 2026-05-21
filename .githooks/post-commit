@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+repo_root="$(git rev-parse --show-toplevel)"
+
+echo "Deploying americanbuiltcnc.com after commit..."
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$repo_root/scripts/deploy-local.ps1"

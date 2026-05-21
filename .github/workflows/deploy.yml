@@ -1,0 +1,37 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/ec2_key
+          chmod 600 ~/.ssh/ec2_key
+          ssh-keyscan -H 107.23.75.91 >> ~/.ssh/known_hosts
+
+      - name: Upload static files
+        run: |
+          scp -i ~/.ssh/ec2_key index.html thankyou.html ubuntu@107.23.75.91:/tmp/
+
+      - name: Publish to Caddy web root
+        run: |
+          ssh -i ~/.ssh/ec2_key ubuntu@107.23.75.91 \
+            "sudo mkdir -p /var/www/americanbuiltcnc && \
+             sudo cp /tmp/index.html /var/www/americanbuiltcnc/index.html && \
+             sudo cp /tmp/thankyou.html /var/www/americanbuiltcnc/thankyou.html"
+
+      - name: Verify deploy
+        run: |
+          curl -fsSL https://americanbuiltcnc.com/ | grep -q "Enclosed fiber lasers for metal shops"
+          curl -fsSL https://americanbuiltcnc.com/thankyou.html | grep -q "Thanks. We got your request."
