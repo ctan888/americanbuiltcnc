@@ -3,47 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>American-Built CNC Fiber Laser Tables</title>
+    <title>CNC Fiber Laser Tables for Small Metal Shops</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; }
         .hero { background: #0a0a0a; color: #fff; padding: 80px 20px; text-align: center; }
         .hero h1 { font-size: 2.8rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 16px; }
-        .hero p { font-size: 1.2rem; color: #aaa; max-width: 600px; margin: 0 auto 40px; }
-        .tagline { display: inline-block; background: #2563eb; color: #fff; padding: 8px 20px; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
-        .products { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-        .products h2 { text-align: center; font-size: 1.8rem; margin-bottom: 48px; }
+        .hero .sub { font-size: 1.3rem; color: #ccc; margin-bottom: 8px; }
+        .hero .price { font-size: 2rem; font-weight: 700; color: #60a5fa; margin-bottom: 24px; }
+        .hero .note { font-size: 0.9rem; color: #888; max-width: 500px; margin: 0 auto 32px; }
+        .btn { display: inline-block; background: #2563eb; color: #fff; padding: 16px 48px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
+        .btn:hover { background: #1d4ed8; }
+        .btn-dark { background: #0a0a0a; }
+        .btn-dark:hover { background: #333; }
+        .why { max-width: 900px; margin: 80px auto; padding: 0 20px; }
+        .why h2 { text-align: center; font-size: 1.6rem; margin-bottom: 40px; }
+        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .why-item h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .why-item p { color: #555; font-size: 0.95rem; line-height: 1.6; }
+        .products { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        .products h2 { text-align: center; font-size: 1.6rem; margin-bottom: 48px; }
         .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-        .card { border: 2px solid #e5e5e5; border-radius: 8px; padding: 40px 32px; text-align: center; }
-        .card h3 { font-size: 1.5rem; margin-bottom: 8px; }
-        .card .size { color: #666; font-size: 0.95rem; margin-bottom: 24px; }
-        .card .price { font-size: 2.2rem; font-weight: 700; margin-bottom: 24px; }
-        .card ul { list-style: none; text-align: left; margin-bottom: 32px; }
-        .card ul li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.95rem; color: #333; }
+        .card { border: 2px solid #e5e5e5; border-radius: 8px; padding: 36px 28px; text-align: center; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+        .card .size { color: #666; font-size: 0.9rem; margin-bottom: 20px; }
+        .card .price { font-size: 2rem; font-weight: 700; margin-bottom: 20px; }
+        .card ul { list-style: none; text-align: left; margin-bottom: 28px; }
+        .card ul li { padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; color: #333; }
         .card ul li:last-child { border-bottom: none; }
-        .btn { display: inline-block; background: #0a0a0a; color: #fff; padding: 14px 36px; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
-        .btn:hover { background: #2563eb; }
+        .compare { max-width: 900px; margin: 80px auto; padding: 0 20px; }
+        .compare h2 { text-align: center; font-size: 1.6rem; margin-bottom: 32px; }
+        .compare table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .compare th, .compare td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #e5e5e5; }
+        .compare th { font-weight: 600; color: #666; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.5px; }
+        .compare td:first-child { font-weight: 600; color: #333; }
         .form-section { background: #f5f5f5; padding: 60px 20px; }
-        .form-section h2 { text-align: center; font-size: 1.8rem; margin-bottom: 12px; }
+        .form-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 8px; }
         .form-section p { text-align: center; color: #666; margin-bottom: 32px; }
-        form { max-width: 500px; margin: 0 auto; }
-        input { display: block; width: 100%; padding: 12px 16px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+        form { max-width: 480px; margin: 0 auto; }
+        input { display: block; width: 100%; padding: 12px 16px; margin-bottom: 14px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
         input:focus { outline: none; border-color: #2563eb; }
-        .hidden { display: none; }
-        .compare { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        .compare table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-        .compare th, .compare td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #e5e5e5; }
-        .compare th { font-weight: 600; color: #666; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; }
         footer { text-align: center; padding: 40px 20px; color: #999; font-size: 0.85rem; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 1.8rem; } }
+        @media (max-width: 768px) { .grid, .why-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
 
 <div class="hero">
-    <div class="tagline">American-Built</div>
-    <h1>CNC Fiber Laser Tables<br>for Metal Fabrication Shops</h1>
-    <p>Production-grade fiber laser cutting machines. Designed and assembled in the U.S. with local service and support.</p>
+    <h1>5x10 Fiber Laser for Small Metal Shops</h1>
+    <div class="sub">2kW &bull; Enclosed &bull; U.S.-assembled and supported</div>
+    <div class="price">Target price: $39,900</div>
+    <div class="note">Full 5x10 sheet capacity. Ready-to-cut setup. Phone support and parts stocked in the U.S.</div>
+    <a href="#quote" class="btn">Get a Quote</a>
+</div>
+
+<div class="why">
+    <h2>Why This Exists</h2>
+    <div class="why-grid">
+        <div class="why-item">
+            <h3>5x10, not 4x8</h3>
+            <p>Apollo does 4x8. Boss starts at $52K for 5x10. We're targeting commercial-grade 5x10 at $40K — for shops that need full-sheet capacity without paying premium pricing.</p>
+        </div>
+        <div class="why-item">
+            <h3>Commercial-grade, not prosumer</h3>
+            <p>Enclosed. Optically sealed. Built for 8-hour production shifts. Not a hobby machine scaled up — designed for shop-floor use from the start.</p>
+        </div>
+        <div class="why-item">
+            <h3>U.S. parts and support</h3>
+            <p>Parts in stock, shipped from the U.S. Phone support from people who know the machine. Optional on-site commissioning and operator training.</p>
+        </div>
+        <div class="why-item">
+            <h3>Built by people who know these machines</h3>
+            <p>Our machine team has 20 years designing laser and plasma cutting systems. Our software team has scaled systems at Netflix and Confluent.</p>
+        </div>
+    </div>
 </div>
 
 <div class="products">
@@ -58,10 +91,10 @@
                 <li>2kW fiber laser</li>
                 <li>Cuts up to 3/4" carbon steel</li>
                 <li>Fully enclosed</li>
-                <li>Remote diagnostics</li>
-                <li>U.S.-based support</li>
+                <li>U.S. phone support</li>
+                <li>Parts stocked domestically</li>
             </ul>
-            <a href="#quote" class="btn" onclick="selectModel('FL-5102')">Get Quote</a>
+            <a href="#quote" class="btn btn-dark" onclick="selectModel('FL-5102')">Get Quote</a>
         </div>
         <div class="card">
             <h3>FL-6123</h3>
@@ -72,10 +105,10 @@
                 <li>3kW fiber laser</li>
                 <li>Cuts up to 1" carbon steel</li>
                 <li>Fully enclosed</li>
-                <li>Remote diagnostics</li>
-                <li>U.S.-based support</li>
+                <li>U.S. phone support</li>
+                <li>Optional commissioning</li>
             </ul>
-            <a href="#quote" class="btn" onclick="selectModel('FL-6123')">Get Quote</a>
+            <a href="#quote" class="btn btn-dark" onclick="selectModel('FL-6123')">Get Quote</a>
         </div>
         <div class="card">
             <h3>FL-8204</h3>
@@ -86,29 +119,29 @@
                 <li>4kW fiber laser</li>
                 <li>Cuts up to 1.25" carbon steel</li>
                 <li>Fully enclosed</li>
-                <li>Remote diagnostics</li>
-                <li>U.S.-based support</li>
+                <li>U.S. phone support</li>
+                <li>On-site install available</li>
             </ul>
-            <a href="#quote" class="btn" onclick="selectModel('FL-8204')">Get Quote</a>
+            <a href="#quote" class="btn btn-dark" onclick="selectModel('FL-8204')">Get Quote</a>
         </div>
     </div>
 </div>
 
 <div class="compare">
+    <h2>How We Compare</h2>
     <table>
         <tr><th></th><th>American Built CNC</th><th>Langmuir Apollo</th><th>Boss Laser</th><th>Chinese Import</th></tr>
-        <tr><td>Table size</td><td>5x10 / 6x12 / 8x20</td><td>4x8</td><td>5x10</td><td>Varies</td></tr>
+        <tr><td>5x10 option</td><td>Yes — $39,900</td><td>No (4x8 only)</td><td>Yes — $51,997+</td><td>Yes — $22K+</td></tr>
         <tr><td>Laser power</td><td>2-4kW</td><td>1.5kW</td><td>1.5-3kW</td><td>1-6kW</td></tr>
-        <tr><td>Enclosure</td><td>Enclosed + sealed</td><td>Not optically sealed</td><td>Varies</td><td>Usually open</td></tr>
-        <tr><td>Assembly</td><td>USA</td><td>Texas</td><td>USA dist.</td><td>China</td></tr>
-        <tr><td>Service</td><td>Remote diag + phone</td><td>Phone/email</td><td>Phone/email</td><td>Minimal</td></tr>
-        <tr><td>Price (5x10, 2kW)</td><td>$39,900</td><td>N/A (4x8 only)</td><td>$51,997</td><td>$15-25K</td></tr>
+        <tr><td>Enclosure</td><td>Enclosed + sealed</td><td>Not optically sealed</td><td>Varies by model</td><td>Usually open</td></tr>
+        <tr><td>Assembly</td><td>U.S.-assembled</td><td>U.S.-assembled</td><td>U.S. distributed</td><td>China</td></tr>
+        <tr><td>Support</td><td>Phone + parts in stock</td><td>Phone/email</td><td>Phone/email</td><td>Minimal to none</td></tr>
     </table>
 </div>
 
 <div class="form-section" id="quote">
     <h2>Get a Quote</h2>
-    <p>Tell us about your shop and we'll send you a detailed quote.</p>
+    <p>Tell us about your shop. We'll follow up with pricing and specs.</p>
     <form action="https://formspree.io/f/xwpkkqjp" method="POST">
         <input type="hidden" name="model" id="model-input" value="not-selected">
         <input type="text" name="name" placeholder="Your name" required>
