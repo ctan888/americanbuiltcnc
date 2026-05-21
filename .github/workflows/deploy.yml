@@ -13,6 +13,13 @@ jobs:
       - name: Check out site
         uses: actions/checkout@v4
 
+      - name: Check deploy secret
+        run: |
+          if [ -z "${{ secrets.EC2_SSH_KEY }}" ]; then
+            echo "::error::Missing GitHub secret EC2_SSH_KEY. Add the private key content in repo Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
       - name: Install SSH key
         run: |
           mkdir -p ~/.ssh
