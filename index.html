@@ -293,7 +293,6 @@
         .product-card div.row { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; padding: 10px 0; border-top: 1px solid #ececef; }
         .product-card dt { color: var(--muted); font-size: 0.78rem; font-weight: 900; text-transform: uppercase; }
         .product-card dd { font-weight: 800; overflow-wrap: anywhere; }
-        .product-card .btn { width: 100%; margin-top: 22px; }
 
         .compare-table-wrap {
             margin-top: 30px;
@@ -523,7 +522,6 @@
                         <div class="row"><dt>Use case</dt><dd>Small shops, sheet metal, signs, brackets, cabinets</dd></div>
                         <div class="row"><dt>Format</dt><dd>Enclosed table</dd></div>
                     </dl>
-                    <a href="#quote" class="btn" onclick="selectModel('ABC FL-2030-2 - 2m x 3m / 2kW / $68,000')">Get a Quote</a>
                 </article>
                 <article class="product-card">
                     <div class="model">ABC FL-2040-3</div>
@@ -534,7 +532,6 @@
                         <div class="row"><dt>Use case</dt><dd>Longer parts, HVAC, architectural metal, production fab</dd></div>
                         <div class="row"><dt>Format</dt><dd>Enclosed table</dd></div>
                     </dl>
-                    <a href="#quote" class="btn" onclick="selectModel('ABC FL-2040-3 - 2m x 4m / 3kW / $110,000')">Get a Quote</a>
                 </article>
                 <article class="product-card">
                     <div class="model">ABC FL-2560-6</div>
@@ -545,7 +542,6 @@
                         <div class="row"><dt>Use case</dt><dd>Structural, plate, trailer/body, heavy fabrication</dd></div>
                         <div class="row"><dt>Format</dt><dd>Enclosed large-format table</dd></div>
                     </dl>
-                    <a href="#quote" class="btn" onclick="selectModel('ABC FL-2560-6 - 2.5m x 6m / 6kW / $170,000')">Get a Quote</a>
                 </article>
             </div>
         </section>
@@ -640,12 +636,5 @@
     <footer>
         <div class="wrap">American Built CNC - enclosed fiber laser cutters for metal shops</div>
     </footer>
-
-    <script>
-        function selectModel(model) {
-            var hidden = document.getElementById("model-input");
-            if (hidden) hidden.value = model;
-        }
-    </script>
 </body>
 </html>
