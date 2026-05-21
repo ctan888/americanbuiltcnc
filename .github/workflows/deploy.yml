@@ -40,5 +40,5 @@ jobs:
 
       - name: Verify deploy
         run: |
-          curl -fsSL https://americanbuiltcnc.com/ | grep -q "Enclosed fiber lasers for metal shops"
+          curl -fsSL https://americanbuiltcnc.com/ | grep -q "Enclosed fiber lasers for small shops"
           curl -fsSL https://americanbuiltcnc.com/thankyou.html | grep -q "Thanks. We got your request."
