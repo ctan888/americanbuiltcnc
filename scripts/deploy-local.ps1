@@ -30,7 +30,7 @@ $hostName = "ubuntu@107.23.75.91"
 $homeResp = Invoke-WebRequest -Uri "https://americanbuiltcnc.com/" -UseBasicParsing -TimeoutSec 20
 $thanksResp = Invoke-WebRequest -Uri "https://americanbuiltcnc.com/thankyou.html" -UseBasicParsing -TimeoutSec 20
 
-if (-not $homeResp.Content.Contains("Enclosed fiber lasers for small shops")) {
+if (-not $homeResp.Content.Contains("American-built CNC fiber lasers")) {
     throw "Deploy verification failed: homepage marker not found."
 }
 if (-not $thanksResp.Content.Contains("Thanks. We got your request.")) {
