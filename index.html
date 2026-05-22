@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enclosed Fiber Laser Cutters for Small Shops</title>
+    <title>American-Built CNC Fiber Laser Machines</title>
     <style>
         :root {
             --ink: #101114;
@@ -18,7 +18,7 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        html { max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
         body {
             min-width: 320px;
             overflow-x: hidden;
@@ -131,6 +131,13 @@
             margin-top: 22px;
             color: rgba(255,255,255,0.78);
             font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+        }
+        .proofline {
+            max-width: 720px;
+            margin-top: 14px;
+            color: rgba(255,255,255,0.92);
+            font-size: 1rem;
+            font-weight: 850;
         }
         .flag-badge {
             display: inline-flex;
@@ -289,6 +296,7 @@
         }
         .product-card h3 { margin-top: 8px; font-size: 1.5rem; }
         .product-price { margin: 14px 0 18px; font-size: 2rem; font-weight: 950; line-height: 1; }
+        .price-note { margin: -8px 0 18px; color: var(--muted); font-size: 0.85rem; font-weight: 700; }
         .product-card dl { display: grid; gap: 0; }
         .product-card div.row { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; padding: 10px 0; border-top: 1px solid #ececef; }
         .product-card dt { color: var(--muted); font-size: 0.78rem; font-weight: 900; text-transform: uppercase; }
@@ -406,15 +414,17 @@
         }
 
         @media (max-width: 640px) {
-            .wrap { width: calc(100vw - 28px); max-width: calc(100vw - 28px); }
+            .wrap { width: calc(100% - 28px); max-width: calc(100% - 28px); }
             .section { padding: 52px 0; }
             header { position: static; }
             .nav { min-height: 58px; }
             .brand span { max-width: 150px; line-height: 1.05; }
             .nav-links .btn { display: none; }
-            h2 { font-size: 1.72rem; line-height: 1.12; }
+            h1, h2, h3 { overflow-wrap: anywhere; }
+            h2 { font-size: 1.45rem; line-height: 1.14; }
             .lead, p { overflow-wrap: anywhere; }
-            .hero h1 { font-size: clamp(2.2rem, 13vw, 3.2rem); overflow-wrap: anywhere; }
+            .flag-badge { display: none; }
+            .hero h1 { font-size: clamp(2rem, 10vw, 2.65rem); overflow-wrap: anywhere; }
             .hero .subhead { font-size: 1rem; }
             .hero-actions .btn { width: 100%; }
             .hero-actions .btn.secondary { display: none; }
@@ -422,7 +432,9 @@
             .hero-fact { border-right: 0; padding: 17px 0; }
             .hero-fact:nth-last-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.14); }
             .hero-fact:last-child { border-bottom: 0; }
-            .ladder-row { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; padding: 16px; }
+            .ladder-row { grid-template-columns: 1fr; gap: 6px; padding: 16px; }
+            .ladder-copy strong, .ladder-copy span { overflow-wrap: anywhere; }
+            .product-card div.row { grid-template-columns: 1fr; gap: 4px; }
             .machine-panel { min-height: 320px; padding: 22px; }
             .machine-panel::before { inset: 48px 14px 100px; }
             .machine-panel::after { bottom: 160px; }
@@ -444,7 +456,7 @@
                 <a href="#wedge">Wedge</a>
                 <a href="#spec">Spec</a>
                 <a href="#compare">Compare</a>
-                <a href="#quote" class="btn">Get a Quote</a>
+                <a href="#quote" class="btn">Request Pilot Quote</a>
             </nav>
         </div>
     </header>
@@ -455,12 +467,13 @@
                 <div class="eyebrow">Commercial fiber laser line</div>
                 <div class="flag-badge">
                     <span class="flag-icon" aria-hidden="true"></span>
-                    <span class="badge-copy">Designed. Built. Supported in the U.S.</span>
+                    <span class="badge-copy">Designed. Manufactured. Supported in the U.S.</span>
                 </div>
-                <h1>Enclosed fiber lasers for small shops.</h1>
-                <p class="subhead">U.S.-designed, U.S.-built, and U.S.-supported enclosed fiber lasers for 10-100 person fabrication shops, powered by our in-house motion, control, and diagnostics stack.</p>
+                <h1>American-built CNC fiber lasers.</h1>
+                <p class="subhead">Enclosed fiber laser machines for fabrication shops, powered by our in-house motion control, diagnostics, and service stack.</p>
+                <p class="proofline">Prototype built. Now placing pilot machines with fabrication shops.</p>
                 <div class="hero-actions">
-                    <a href="#quote" class="btn">Get a Quote</a>
+                    <a href="#quote" class="btn">Request Pilot Quote</a>
                     <a href="#spec" class="btn secondary">View machines</a>
                 </div>
                 <div class="hero-strip" aria-label="Key specifications">
@@ -476,8 +489,8 @@
             <div class="wrap gap-grid">
                 <div>
                     <div class="eyebrow">Why it exists</div>
-                    <h2>Not a hobby laser. Not a $250K industrial system.</h2>
-                    <p class="lead">Built for fabrication shops that want commercial fiber laser capacity with the controller, diagnostics, and service workflow designed as part of the machine.</p>
+                    <h2>Between hobby lasers and $250K systems.</h2>
+                    <p class="lead">Built for shops upgrading cutting capacity that do not want to become the integrator after purchase. Machine, control, diagnostics, parts, and service are designed as one accountable stack.</p>
                 </div>
             </div>
 
@@ -507,16 +520,17 @@
             <div class="wrap spec-head">
                 <div>
                     <div class="eyebrow">Product configurations</div>
-                    <h2>Three sizes for real shop work.</h2>
+                    <h2>Three real shop sizes.</h2>
                     <p class="lead">Final cutting thickness depends on laser source, cutting head, assist gas, and material validation.</p>
                 </div>
-                <a href="#quote" class="btn">Get a Quote</a>
+                <a href="#quote" class="btn">Request Pilot Quote</a>
             </div>
             <div class="wrap product-grid">
                 <article class="product-card">
                     <div class="model">ABC FL-2030-2</div>
                     <h3>2m x 3m</h3>
                     <div class="product-price">$68,000</div>
+                    <div class="price-note">Starting target price before freight/options.</div>
                     <dl>
                         <div class="row"><dt>Power</dt><dd>2kW fiber</dd></div>
                         <div class="row"><dt>Use case</dt><dd>Small shops, sheet metal, signs, brackets, cabinets</dd></div>
@@ -527,6 +541,7 @@
                     <div class="model">ABC FL-2040-3</div>
                     <h3>2m x 4m</h3>
                     <div class="product-price">$110,000</div>
+                    <div class="price-note">Starting target price before freight/options.</div>
                     <dl>
                         <div class="row"><dt>Power</dt><dd>3kW fiber</dd></div>
                         <div class="row"><dt>Use case</dt><dd>Longer parts, HVAC, architectural metal, production fab</dd></div>
@@ -537,6 +552,7 @@
                     <div class="model">ABC FL-2560-6</div>
                     <h3>2.5m x 6m</h3>
                     <div class="product-price">$170,000</div>
+                    <div class="price-note">Starting target price before freight/options.</div>
                     <dl>
                         <div class="row"><dt>Power</dt><dd>6kW fiber</dd></div>
                         <div class="row"><dt>Use case</dt><dd>Structural, plate, trailer/body, heavy fabrication</dd></div>
@@ -549,8 +565,8 @@
         <section class="section" id="compare">
             <div class="wrap">
                 <div class="eyebrow">How buyers compare</div>
-                <h2>More support than an import. Less friction than a custom industrial buy.</h2>
-                <p class="lead">The buyer already knows cheaper imports exist. The question is whether domestic support, stocked parts, and commissioning reduce enough ownership risk to justify the premium.</p>
+                <h2>One accountable upgrade path between imports and premium industrial systems.</h2>
+                <p class="lead">Cheaper imports, used machines, and dealer-built setups can leave the buyer coordinating machine, controller, install, parts, and service. ABC keeps those pieces in one stack.</p>
 
                 <div class="compare-table-wrap">
                     <table class="compare-table" aria-label="Fiber laser buying options comparison">
@@ -612,13 +628,13 @@
         <section class="section quote" id="quote">
             <div class="wrap quote-layout">
                 <div>
-                    <div class="eyebrow">Machine quotes</div>
+                    <div class="eyebrow">Pilot machine quotes</div>
                     <h2>Tell us what you cut today.</h2>
-                    <p class="lead">Share your current machine, material, thickness, and table-size needs. We will recommend the closest configuration.</p>
+                    <p class="lead">We are placing pilot machines with fabrication shops. Share your current machine, material, thickness, and table-size needs, and we will recommend the closest configuration.</p>
                     <div class="quote-points">
                         <div>Best fit: 10-100 person fabrication shops comparing imports against supported commercial equipment.</div>
                         <div>Useful details: current equipment, material thickness, table size, cut-quality issues, and downtime pain.</div>
-                        <div>We will follow up with specs, pricing, and launch timing.</div>
+                        <div>We will follow up with pilot specs, pricing, and launch timing.</div>
                     </div>
                 </div>
                 <form action="https://formspree.io/f/xwpkkqjp" method="POST">
@@ -630,7 +646,7 @@
                     <input type="tel" name="phone" placeholder="Phone (optional)">
                     <input type="text" name="current_equipment" placeholder="Current cutting equipment">
                     <textarea name="requirements" placeholder="Which machine are you interested in? What material, thickness, and table size do you need?"></textarea>
-                    <button type="submit" class="btn" style="width:100%;">Get a Quote</button>
+                    <button type="submit" class="btn" style="width:100%;">Request Pilot Quote</button>
                     <p class="fine-print">Final pricing depends on freight, installation, gas setup, and selected options.</p>
                 </form>
             </div>
@@ -638,7 +654,7 @@
     </main>
 
     <footer>
-        <div class="wrap">American Built CNC - enclosed fiber laser cutters for small shops</div>
+        <div class="wrap">American Built CNC - American-built CNC fiber laser machines for fabrication shops</div>
     </footer>
 </body>
 </html>
